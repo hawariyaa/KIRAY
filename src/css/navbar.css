@@ -1,0 +1,96 @@
+/* Light theme */
+.navbar.light {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* Dark theme */
+.navbar.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Mode section */
+.mode {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.mode h2 {
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.dark .search-box {
+  background-color: #333;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: inherit;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-box img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .mode {
+    gap: 16px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+}
+.mode h2:hover{
+  color: #007bff;
+  box-shadow: 0 0 8px 2px rgba(0, 123, 255, 0.6);
+  transition: box-shadow 0.3s ease;
+}
