@@ -6,11 +6,19 @@ import ph6 from '../assets/ph6.jpeg';
 import ph7 from '../assets/ph7.jpeg';
 import ph8 from '../assets/ph8.jpg';
 import ph2 from '../assets/ph2.webp';
+import phh1 from '../assets/phh1.webp';
+import phh2 from '../assets/phh2.webp';
+import phh3 from '../assets/phh3.jpg';
 import { useRef } from 'react';
+import Hicon from '../assets/Hicon.svg'; 
+import cicon from '../assets/cicon.svg';
+import picon from '../assets/picon.svg';
+import gicon from '../assets/gicon.svg';
+import Ficon from '../assets/Ficon.svg';
 const rawSlides = [
-  { img: ph5, caption: 'Houses' },
-  { img: ph6, caption: 'Cars' },
-  { img: ph7, caption: 'Electronics' },
+  { img: phh1, caption: 'Houses' },
+  { img: phh2, caption: 'Cars' },
+  { img: phh3, caption: 'Electronics' },
   { img: ph8, caption: 'Machineries' },
   { img: ph2, caption: 'Clothes' },
 ];
@@ -84,6 +92,16 @@ function Home() {
             ))}
           </div>
         </div>
+      </div> 
+      <div className={`categories-section ${theme === 'dark' ? 'dark' : ''}`}>
+        <ul className="category-list">
+          <li><img src={Hicon} alt="houseicon" />Houses</li>
+          <li><img src={cicon} alt="caricon" />Cars</li>
+          <li><img src={picon} alt="Electronicsicon" />Electronics</li>
+          <li><img src={gicon} alt="Machineriesicon" />Machineries</li>
+          <li><img src={Ficon} alt="clothicon" />Clothes and Fashion</li>
+          <li>...Others</li>
+        </ul>
       </div>
     </>
   );

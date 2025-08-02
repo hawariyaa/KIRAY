@@ -126,3 +126,217 @@ body, html {
     text-align: center;
   }
 }
+/* === General === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Dark Theme === */
+.home-container.dark,
+.categories-section.dark {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+.home-container.dark .text-section p,
+.home-container.dark .text-section h1,
+.home-container.dark .text-section h2,
+.home-container.dark .text-section h3 {
+  color: #eaeaea;
+}
+
+/* === Sticky Header === */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.sticky-header.dark {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* === Home Container === */
+.home-container {
+  padding: 2rem;
+}
+
+/* === Text Section === */
+.text-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-section h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.text-section h3 {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.text-section p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* === Dots === */
+.dots {
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.home-container.dark .dot {
+  background-color: #777;
+}
+
+.home-container.dark .dot.active {
+  background-color: #eaeaea;
+}
+
+/* === Slider Section === */
+.slider-section {
+  overflow: hidden;
+  position: relative;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* === Category Section === */
+.categories-section {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categories-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.categories-section.dark h2 {
+  color: #eaeaea;
+}
+
+/* === Category List === */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  flex: 1 1 150px;
+  max-width: 300px;
+}
+
+.category-list li:hover {
+  transform: translateY(-4px);
+}
+
+.category-list img {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.75rem;
+  filter: grayscale(20%);
+}
+
+/* === Dark Theme for Categories === */
+.categories-section.dark .category-list li {
+  background: #2a2a2a;
+  color: #eaeaea;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.categories-section.dark .category-list img {
+  filter: brightness(0) invert(1);
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 768px) {
+  .category-list {
+    justify-content: space-around;
+  }
+
+  .category-list li {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-list li {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .category-list img {
+    margin-right: 0.5rem;
+  }
+}
+
+
